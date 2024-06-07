@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://05teys76vl85"]
+
+[ext_resource type="Script" path="res://scripts/item_container.gd" id="1_ot6y0"]
+
+[sub_resource type="Gradient" id="Gradient_i2mir"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0, 0.0104167, 0.0625, 0.453125, 0.994792)
+colors = PackedColorArray(0.991325, 0, 0.175514, 0.886275, 0.992157, 0, 0.0901961, 0.929412, 0.992157, 0, 0.137255, 0.592157, 0.635391, 0.635391, 0.635391, 0.513726, 0.635391, 0.635391, 0.635391, 0.768627)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ojpbs"]
+gradient = SubResource("Gradient_i2mir")
+width = 320
+height = 240
+fill_from = Vector2(0.5, 1)
+fill_to = Vector2(0.5, 0)
+metadata/_snap_enabled = true
+
+[sub_resource type="LabelSettings" id="LabelSettings_epq20"]
+font_size = 30
+outline_size = 4
+outline_color = Color(0.881072, 0.881072, 0.881072, 1)
+shadow_size = 8
+shadow_color = Color(0, 0, 0, 0.329412)
+shadow_offset = Vector2(-3.28, 5.735)
+
+[node name="item_container" type="Node2D"]
+script = ExtResource("1_ot6y0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("GradientTexture2D_ojpbs")
+
+[node name="Label" type="Label" parent="Sprite2D"]
+offset_left = -160.0
+offset_top = -120.0
+offset_right = 160.0
+offset_bottom = 120.0
+text = "Eumelcrafter"
+label_settings = SubResource("LabelSettings_epq20")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2

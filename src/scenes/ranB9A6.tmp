@@ -1,8 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://ba7xvwb1uxrd0"]
+[gd_scene load_steps=4 format=3 uid="uid://ba7xvwb1uxrd0"]
 
 [ext_resource type="Script" path="res://scripts/item_chain.gd" id="1_0wcep"]
-[ext_resource type="Texture2D" uid="uid://puiiikrirmcd" path="res://assets/images/Dust2.png" id="2_oehoi"]
-[ext_resource type="AudioStream" uid="uid://bpvvuwb1bmkoa" path="res://assets/sounds/CaseClicking.mp3" id="3_6hffp"]
 
 [sub_resource type="Gradient" id="Gradient_s2cug"]
 offsets = PackedFloat32Array(0, 0.5, 1)
@@ -18,19 +16,9 @@ metadata/_snap_enabled = true
 
 [node name="random_selection_screen" type="Node2D"]
 
-[node name="Sprite2D2" type="Sprite2D" parent="."]
-position = Vector2(-507, -3)
-scale = Vector2(1.41918, 1.43162)
-texture = ExtResource("2_oehoi")
-centered = false
-
 [node name="chain" type="Node2D" parent="."]
 position = Vector2(175, 400)
 script = ExtResource("1_0wcep")
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="chain"]
-stream = ExtResource("3_6hffp")
-max_polyphony = 3
 
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
