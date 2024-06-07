@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://ba7xvwb1uxrd0"]
+
+[node name="random_selection_screen" type="Node2D"]
