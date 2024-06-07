@@ -15,3 +15,7 @@ func _scene(scene):
 
 func _on_to_main_pressed():
 	_scene("mainmenu")
+
+
+func _on_http_request_request_completed(result, response_code, headers, body):
+	pass # Replace with function body.
