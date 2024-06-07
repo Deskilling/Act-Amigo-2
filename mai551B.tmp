@@ -1,0 +1,203 @@
+[gd_scene load_steps=7 format=3 uid="uid://bvsixe1bhu2y5"]
+
+[ext_resource type="Script" path="res://scripts/mainmenu.gd" id="1_2641c"]
+[ext_resource type="Texture2D" uid="uid://dbf38kqyrvufj" path="res://assets/images/logo.png" id="1_odjo1"]
+[ext_resource type="Texture2D" uid="uid://cjkyd8i1vmhp8" path="res://assets/images/bernd.png" id="2_askgk"]
+
+[sub_resource type="Gradient" id="Gradient_xka2e"]
+offsets = PackedFloat32Array(0, 0.771084)
+colors = PackedColorArray(0.194349, 0.194349, 0.194349, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_wgyoc"]
+gradient = SubResource("Gradient_xka2e")
+fill_from = Vector2(0.469565, 0)
+fill_to = Vector2(0.491304, 1)
+
+[sub_resource type="Theme" id="Theme_pxh3y"]
+
+[node name="main_menu" type="Node2D"]
+script = ExtResource("1_2641c")
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(180, 401)
+scale = Vector2(5.71875, 12.6875)
+texture = SubResource("GradientTexture2D_wgyoc")
+
+[node name="bernd" type="Sprite2D" parent="background"]
+position = Vector2(-4.19672, 23.1724)
+scale = Vector2(0.174863, 0.0788177)
+texture = ExtResource("2_askgk")
+
+[node name="logo" type="Sprite2D" parent="."]
+position = Vector2(80, 88)
+scale = Vector2(0.034668, 0.0349121)
+texture = ExtResource("1_odjo1")
+
+[node name="title" type="RichTextLabel" parent="."]
+offset_left = 157.0
+offset_top = 27.0
+offset_right = 358.0
+offset_bottom = 181.0
+theme = SubResource("Theme_pxh3y")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 58
+
+[node name="act" type="RichTextLabel" parent="title"]
+layout_mode = 0
+offset_left = 75.0
+offset_top = -11.0
+offset_right = 204.0
+offset_bottom = 65.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/normal_font_size = 50
+text = " Act"
+tab_size = 6
+
+[node name="amigo" type="RichTextLabel" parent="title"]
+layout_mode = 0
+offset_left = -5.0
+offset_top = 45.0
+offset_right = 159.0
+offset_bottom = 137.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/normal_font_size = 40
+text = " Amigo"
+
+[node name="info" type="RichTextLabel" parent="title"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 93.0
+offset_right = 213.0
+offset_bottom = 151.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Your personal 
+theatre companion"
+
+[node name="button" type="Button" parent="."]
+offset_left = -89.0
+offset_top = 12.0
+offset_right = -15.0
+offset_bottom = 81.0
+text = "This is  a 
+Button"
+
+[node name="to_main" type="Button" parent="button"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.202
+anchor_top = -0.198
+anchor_right = 1.202
+anchor_bottom = -0.198
+offset_left = 8.104
+offset_top = 11.324
+offset_right = 78.104
+offset_bottom = 58.324
+grow_horizontal = 2
+grow_vertical = 2
+text = "Zurück"
+
+[node name="to_impulse" type="Button" parent="button"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.202
+anchor_top = -0.198
+anchor_right = 1.202
+anchor_bottom = -0.198
+offset_left = 8.052
+offset_top = 185.662
+offset_right = 112.052
+offset_bottom = 297.662
+grow_horizontal = 2
+grow_vertical = 2
+text = "Impulse"
+
+[node name="to_rollen_orte_konflikte" type="Button" parent="button"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.202
+anchor_top = -0.198
+anchor_right = 1.202
+anchor_bottom = -0.198
+offset_left = 128.052
+offset_top = 185.662
+offset_right = 232.052
+offset_bottom = 297.662
+grow_horizontal = 2
+grow_vertical = 2
+text = "Rollen,
+Orte,
+Konflikte"
+
+[node name="to_stimmungen" type="Button" parent="button"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.202
+anchor_top = -0.198
+anchor_right = 1.202
+anchor_bottom = -0.198
+offset_left = 246.436
+offset_top = 185.662
+offset_right = 352.436
+offset_bottom = 297.662
+grow_horizontal = 2
+grow_vertical = 2
+text = "Stimmungen"
+
+[node name="to_emojis" type="Button" parent="button"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.202
+anchor_top = -0.198
+anchor_right = 1.202
+anchor_bottom = -0.198
+offset_left = 8.052
+offset_top = 305.662
+offset_right = 112.052
+offset_bottom = 417.662
+grow_horizontal = 2
+grow_vertical = 2
+text = "Emojis"
+
+[node name="to_impulse5" type="Button" parent="button"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.202
+anchor_top = -0.198
+anchor_right = 1.202
+anchor_bottom = -0.198
+offset_left = 128.052
+offset_top = 305.662
+offset_right = 232.052
+offset_bottom = 417.662
+grow_horizontal = 2
+grow_vertical = 2
+disabled = true
+text = "X"
+
+[node name="to_impulse6" type="Button" parent="button"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.202
+anchor_top = -0.198
+anchor_right = 1.202
+anchor_bottom = -0.198
+offset_left = 246.436
+offset_top = 305.662
+offset_right = 352.436
+offset_bottom = 417.662
+grow_horizontal = 2
+grow_vertical = 2
+disabled = true
+text = "X"
+
+[connection signal="pressed" from="button/to_impulse" to="." method="_on_to_impulse_pressed"]
+[connection signal="pressed" from="button/to_rollen_orte_konflikte" to="." method="_on_to_rollen_orte_konflikte_pressed"]
+[connection signal="pressed" from="button/to_stimmungen" to="." method="_on_to_stimmungen_pressed"]
+[connection signal="pressed" from="button/to_emojis" to="." method="_on_to_emojis_pressed"]
+[connection signal="pressed" from="button/to_impulse5" to="." method="_on_to_impulse_5_pressed"]
