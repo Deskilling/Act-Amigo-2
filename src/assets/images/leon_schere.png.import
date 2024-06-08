@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://puiiikrirmcd"
-path="res://.godot/imported/dust2.png-ab522812a653ea7c7c5ad3f79b55b17a.ctex"
+uid="uid://cmjpb0df465i1"
+path="res://.godot/imported/leon_schere.png-18f0c31c4ee8af28beb173cff94e686c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/dust2.png"
-dest_files=["res://.godot/imported/dust2.png-ab522812a653ea7c7c5ad3f79b55b17a.ctex"]
+source_file="res://assets/images/leon_schere.png"
+dest_files=["res://.godot/imported/leon_schere.png-18f0c31c4ee8af28beb173cff94e686c.ctex"]
 
 [params]
 

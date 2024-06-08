@@ -1,11 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://05teys76vl85"]
+[gd_scene load_steps=7 format=3 uid="uid://05teys76vl85"]
 
 [ext_resource type="Script" path="res://scripts/item_container.gd" id="1_ot6y0"]
 
 [sub_resource type="Gradient" id="Gradient_i2mir"]
 interpolation_mode = 2
-offsets = PackedFloat32Array(0, 0.0104167, 0.0625, 0.453125, 0.994792)
-colors = PackedColorArray(0.991325, 0, 0.175514, 0.886275, 0.992157, 0, 0.0901961, 0.929412, 0.992157, 0, 0.137255, 0.592157, 0.635391, 0.635391, 0.635391, 0.513726, 0.635391, 0.635391, 0.635391, 0.768627)
+offsets = PackedFloat32Array(0, 0.994792)
+colors = PackedColorArray(0.870588, 0.870588, 0.870588, 0.823529, 0.380392, 0.380392, 0.380392, 0.823529)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_ojpbs"]
 gradient = SubResource("Gradient_i2mir")
@@ -23,6 +23,13 @@ shadow_size = 8
 shadow_color = Color(0, 0, 0, 0.329412)
 shadow_offset = Vector2(-3.28, 5.735)
 
+[sub_resource type="Gradient" id="Gradient_uaq26"]
+offsets = PackedFloat32Array(0, 0.182292, 0.322917, 1)
+colors = PackedColorArray(0, 0.227451, 1, 1, 0, 0.227451, 1, 1, 0, 0.227451, 1, 0.278431, 0, 0.227451, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_p46jm"]
+gradient = SubResource("Gradient_uaq26")
+
 [node name="item_container" type="Node2D"]
 script = ExtResource("1_ot6y0")
 
@@ -30,12 +37,23 @@ script = ExtResource("1_ot6y0")
 texture = SubResource("GradientTexture2D_ojpbs")
 
 [node name="Label" type="Label" parent="Sprite2D"]
-offset_left = -160.0
+offset_left = -148.0
 offset_top = -120.0
 offset_right = 160.0
 offset_bottom = 120.0
-text = "Eumelcrafter"
+text = "Eumelcrafter schere schere schere schere Hodentransplantation"
 label_settings = SubResource("LabelSettings_epq20")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D"]
+visible = false
+position = Vector2(-142, -3.8147e-06)
+scale = Vector2(0.5625, 3.75)
+texture = SubResource("GradientTexture2D_p46jm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(-142, -3.8147e-06)
+scale = Vector2(0.5625, 3.75)
+texture = SubResource("GradientTexture2D_p46jm")
