@@ -1,8 +1,7 @@
-[gd_scene load_steps=15 format=3 uid="uid://ba7xvwb1uxrd0"]
+[gd_scene load_steps=14 format=3 uid="uid://ba7xvwb1uxrd0"]
 
 [ext_resource type="Script" path="res://scripts/item_chain.gd" id="1_0wcep"]
 [ext_resource type="Texture2D" uid="uid://cmjpb0df465i1" path="res://assets/images/leon_schere.png" id="1_p2nno"]
-[ext_resource type="Texture2D" uid="uid://puiiikrirmcd" path="res://assets/images/dust2.png" id="2_uqexu"]
 [ext_resource type="AudioStream" uid="uid://bpvvuwb1bmkoa" path="res://assets/sounds/CaseClicking.mp3" id="3_6hffp"]
 [ext_resource type="AudioStream" uid="uid://cmusnj5npli1p" path="res://assets/sounds/DER BESTE SKIN EVER.mp3" id="4_63b55"]
 [ext_resource type="AudioStream" uid="uid://3smyiy34jo4g" path="res://assets/sounds/CaseOpened.mp3" id="6_s54ku"]
@@ -118,13 +117,6 @@ shadow_offset = Vector2(-3.28, 5.735)
 position = Vector2(-459, -9)
 scale = Vector2(3.28554, 2.72)
 texture = ExtResource("1_p2nno")
-centered = false
-
-[node name="Sprite2D3" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(-890, -11)
-scale = Vector2(1.75717, 1.45471)
-texture = ExtResource("2_uqexu")
 centered = false
 
 [node name="chain" type="Node2D" parent="."]
