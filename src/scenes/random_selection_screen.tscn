@@ -115,13 +115,13 @@ shadow_offset = Vector2(-3.28, 5.735)
 [node name="random_selection_screen" type="Node2D"]
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(-459, -9)
 scale = Vector2(3.28554, 2.72)
 texture = ExtResource("1_p2nno")
 centered = false
 
 [node name="Sprite2D3" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(-890, -11)
 scale = Vector2(1.75717, 1.45471)
 texture = ExtResource("2_uqexu")
