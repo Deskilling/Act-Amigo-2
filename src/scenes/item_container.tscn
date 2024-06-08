@@ -73,10 +73,10 @@ scale = Vector2(1, 0.0845071)
 texture = SubResource("GradientTexture2D_itynr")
 
 [node name="Label" type="Label" parent="Sprite2D"]
-offset_left = -148.0
+offset_left = -160.0
 offset_right = 160.0
 offset_bottom = 120.0
-text = "Eumelcrafter schere schere schere schere Hodentransplantation"
+text = "Eumel"
 label_settings = SubResource("LabelSettings_epq20")
 horizontal_alignment = 1
 vertical_alignment = 1

@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://ba7xvwb1uxrd0"]
+[gd_scene load_steps=15 format=3 uid="uid://ba7xvwb1uxrd0"]
 
 [ext_resource type="Script" path="res://scripts/item_chain.gd" id="1_0wcep"]
-[ext_resource type="Texture2D" uid="uid://cmjpb0df465i1" path="res://assets/images/leon_schere.png" id="1_p2nno"]
+[ext_resource type="Script" path="res://scripts/random_selection_screen.gd" id="1_eicbs"]
+[ext_resource type="Texture2D" uid="uid://c05q1qylpncrs" path="res://assets/images/leon-machere.jpg" id="2_bijjp"]
 [ext_resource type="AudioStream" uid="uid://bpvvuwb1bmkoa" path="res://assets/sounds/CaseClicking.mp3" id="3_6hffp"]
 [ext_resource type="AudioStream" uid="uid://cmusnj5npli1p" path="res://assets/sounds/DER BESTE SKIN EVER.mp3" id="4_63b55"]
 [ext_resource type="AudioStream" uid="uid://3smyiy34jo4g" path="res://assets/sounds/CaseOpened.mp3" id="6_s54ku"]
@@ -9,8 +10,8 @@
 [ext_resource type="FontFile" uid="uid://435itcf47ohf" path="res://assets/fonts/cs_regular.ttf" id="8_xbed8"]
 
 [sub_resource type="Gradient" id="Gradient_s2cug"]
-offsets = PackedFloat32Array(0, 0.5, 1)
-colors = PackedColorArray(1, 0.670588, 0, 0, 1, 0.670588, 0, 1, 1, 0.670588, 0, 0)
+offsets = PackedFloat32Array(0.5)
+colors = PackedColorArray(1, 0.670588, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_xf1ry"]
 gradient = SubResource("Gradient_s2cug")
@@ -112,12 +113,12 @@ shadow_size = 0
 shadow_offset = Vector2(-3.28, 5.735)
 
 [node name="random_selection_screen" type="Node2D"]
+script = ExtResource("1_eicbs")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
-position = Vector2(-459, -9)
-scale = Vector2(3.28554, 2.72)
-texture = ExtResource("1_p2nno")
-centered = false
+position = Vector2(175, 394)
+scale = Vector2(0.271, 0.275333)
+texture = ExtResource("2_bijjp")
 
 [node name="chain" type="Node2D" parent="."]
 position = Vector2(180, 400)
@@ -137,6 +138,8 @@ stream = ExtResource("6_s54ku")
 anchor_mode = 0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 298)
+scale = Vector2(1, 0.25)
 texture = SubResource("GradientTexture2D_xf1ry")
 centered = false
 offset = Vector2(0, 400)
@@ -182,3 +185,17 @@ label_settings = SubResource("LabelSettings_yswrj")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
+
+[node name="Button" type="Button" parent="item_display"]
+offset_left = -78.0
+offset_top = 234.0
+offset_right = 84.0
+offset_bottom = 303.0
+text = "Daumen"
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(182, 401)
+scale = Vector2(0.19375, 0.421875)
+texture = ExtResource("7_mbpwl")
+
+[connection signal="pressed" from="item_display/Button" to="." method="_on_button_pressed"]
