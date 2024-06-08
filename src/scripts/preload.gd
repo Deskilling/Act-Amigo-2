@@ -31,8 +31,8 @@ func _request():
 		_scene("mainmenu")
 
 func _save(content):
-	var file = FileAccess.open("user://assets/text/" + txts[n], FileAccess.WRITE)
-	_update_text(text_saved,"user://assets/text/" + txts[n],"center")
+	var file = FileAccess.open("res://assets/text/" + txts[n], FileAccess.WRITE)
+	_update_text(text_saved,"res://assets/text/" + txts[n],"center")
 	file.store_string(content)
 
 func _on_http_request_request_completed(result, response_code, headers, body):
