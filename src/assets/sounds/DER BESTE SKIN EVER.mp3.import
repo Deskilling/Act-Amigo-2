@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cmusnj5npli1p"
+path="res://.godot/imported/DER BESTE SKIN EVER.mp3-6b6d04a86885048fb7499d4ddcb0a117.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/DER BESTE SKIN EVER.mp3"
+dest_files=["res://.godot/imported/DER BESTE SKIN EVER.mp3-6b6d04a86885048fb7499d4ddcb0a117.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

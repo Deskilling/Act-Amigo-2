@@ -5,7 +5,7 @@ var item_chain = []
 
 var spin_duration = 5.0
 
-const CHAIN_SIZE = 50
+const CHAIN_SIZE = 100
 
 @onready var impulse_database = "res://assets/text/impulse.txt"
 
@@ -16,6 +16,7 @@ func _ready():
 
 
 func generate_chain():
+	var speed = (randi() % 5000 + 5000)
 	for i in range(0, CHAIN_SIZE):
 		var item_container_instance = itemcontainer.instantiate()
 		add_child(item_container_instance)
@@ -23,6 +24,8 @@ func generate_chain():
 		item_container_instance.index = i
 		item_container_instance.label_string = random_impulse()
 		item_container_instance.audioPlayer = $AudioStreamPlayer
+		item_container_instance.audioPlayer2 = $AudioStreamPlayer2
+		item_container_instance.speed = speed
 		
 		item_container_instance.roll()
 		

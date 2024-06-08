@@ -1,11 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://05teys76vl85"]
+[gd_scene load_steps=11 format=3 uid="uid://05teys76vl85"]
 
 [ext_resource type="Script" path="res://scripts/item_container.gd" id="1_ot6y0"]
+[ext_resource type="FontFile" uid="uid://435itcf47ohf" path="res://assets/fonts/cs_regular.ttf" id="2_15lar"]
+[ext_resource type="Texture2D" uid="uid://cdbw1dc5e6eh4" path="res://assets/images/radial_gradient.png" id="2_w0124"]
 
 [sub_resource type="Gradient" id="Gradient_i2mir"]
 interpolation_mode = 2
-offsets = PackedFloat32Array(0, 0.994792)
-colors = PackedColorArray(0.870588, 0.870588, 0.870588, 0.823529, 0.380392, 0.380392, 0.380392, 0.823529)
+offsets = PackedFloat32Array(0.994792)
+colors = PackedColorArray(1, 1, 1, 0.823529)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_ojpbs"]
 gradient = SubResource("Gradient_i2mir")
@@ -15,20 +17,39 @@ fill_from = Vector2(0.5, 1)
 fill_to = Vector2(0.5, 0)
 metadata/_snap_enabled = true
 
+[sub_resource type="Gradient" id="Gradient_gtnre"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0, 0.140625, 1)
+colors = PackedColorArray(0, 0, 0, 0.654902, 0.321569, 0.415686, 1, 1, 0.266667, 0.329412, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_4p23w"]
+gradient = SubResource("Gradient_gtnre")
+width = 320
+height = 240
+fill_from = Vector2(0.5, 1)
+fill_to = Vector2(0.5, 0)
+metadata/_snap_enabled = true
+
+[sub_resource type="Gradient" id="Gradient_oq8g4"]
+offsets = PackedFloat32Array(0.0104167, 1)
+colors = PackedColorArray(0.266667, 0.329412, 1, 1, 0.266667, 0.329412, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_itynr"]
+gradient = SubResource("Gradient_oq8g4")
+width = 320
+height = 240
+fill_from = Vector2(0.5, 1)
+fill_to = Vector2(0.5, 0.9)
+metadata/_snap_enabled = true
+
 [sub_resource type="LabelSettings" id="LabelSettings_epq20"]
-font_size = 30
+font = ExtResource("2_15lar")
+font_size = 35
 outline_size = 4
-outline_color = Color(0.881072, 0.881072, 0.881072, 1)
-shadow_size = 8
+outline_color = Color(1, 1, 1, 0.627451)
+shadow_size = 0
 shadow_color = Color(0, 0, 0, 0.329412)
 shadow_offset = Vector2(-3.28, 5.735)
-
-[sub_resource type="Gradient" id="Gradient_uaq26"]
-offsets = PackedFloat32Array(0, 0.182292, 0.322917, 1)
-colors = PackedColorArray(0, 0.227451, 1, 1, 0, 0.227451, 1, 1, 0, 0.227451, 1, 0.278431, 0, 0.227451, 1, 0)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_p46jm"]
-gradient = SubResource("Gradient_uaq26")
 
 [node name="item_container" type="Node2D"]
 script = ExtResource("1_ot6y0")
@@ -36,9 +57,23 @@ script = ExtResource("1_ot6y0")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = SubResource("GradientTexture2D_ojpbs")
 
+[node name="Sprite2D4" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(0, 7.62939e-06)
+scale = Vector2(0.167, 0.125)
+texture = ExtResource("2_w0124")
+
+[node name="Blue" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(0, 49)
+scale = Vector2(1, 0.591667)
+texture = SubResource("GradientTexture2D_4p23w")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Sprite2D/Blue"]
+position = Vector2(0, 109.859)
+scale = Vector2(1, 0.0845071)
+texture = SubResource("GradientTexture2D_itynr")
+
 [node name="Label" type="Label" parent="Sprite2D"]
 offset_left = -148.0
-offset_top = -120.0
 offset_right = 160.0
 offset_bottom = 120.0
 text = "Eumelcrafter schere schere schere schere Hodentransplantation"
@@ -46,14 +81,3 @@ label_settings = SubResource("LabelSettings_epq20")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
-
-[node name="Sprite2D" type="Sprite2D" parent="Sprite2D"]
-visible = false
-position = Vector2(-142, -3.8147e-06)
-scale = Vector2(0.5625, 3.75)
-texture = SubResource("GradientTexture2D_p46jm")
-
-[node name="Sprite2D2" type="Sprite2D" parent="Sprite2D"]
-position = Vector2(-142, -3.8147e-06)
-scale = Vector2(0.5625, 3.75)
-texture = SubResource("GradientTexture2D_p46jm")
