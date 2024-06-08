@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://ba7xvwb1uxrd0"]
+
+[ext_resource type="Script" path="res://scripts/item_chain.gd" id="1_0wcep"]
+
+[sub_resource type="Gradient" id="Gradient_s2cug"]
+offsets = PackedFloat32Array(0, 0.5, 1)
+colors = PackedColorArray(1, 0.670588, 0, 0, 1, 0.670588, 0, 1, 1, 0.670588, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_xf1ry"]
+gradient = SubResource("Gradient_s2cug")
+width = 360
+height = 16
+fill_from = Vector2(0.5, 1)
+fill_to = Vector2(0.5, 0)
+metadata/_snap_enabled = true
+
+[node name="random_selection_screen" type="Node2D"]
+
+[node name="chain" type="Node2D" parent="."]
+position = Vector2(175, 400)
+script = ExtResource("1_0wcep")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("GradientTexture2D_xf1ry")
+centered = false
+offset = Vector2(0, 400)

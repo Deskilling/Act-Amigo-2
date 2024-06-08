@@ -12,7 +12,7 @@ func _on_to_impulse_pressed():
 	_scene("impulse")
 
 func _on_to_rollen_orte_konflikte_pressed():
-	pass
+	_scene("random_selection_screen")
 
 func _on_to_stimmungen_pressed():
 	pass
