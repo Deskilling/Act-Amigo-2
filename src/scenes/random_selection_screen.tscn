@@ -1,6 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://ba7xvwb1uxrd0"]
+[gd_scene load_steps=15 format=3 uid="uid://ba7xvwb1uxrd0"]
 
 [ext_resource type="Script" path="res://scripts/item_chain.gd" id="1_0wcep"]
+[ext_resource type="Script" path="res://scripts/random_selection_screen.gd" id="1_eicbs"]
 [ext_resource type="Texture2D" uid="uid://cmjpb0df465i1" path="res://assets/images/leon_schere.png" id="1_p2nno"]
 [ext_resource type="AudioStream" uid="uid://bpvvuwb1bmkoa" path="res://assets/sounds/CaseClicking.mp3" id="3_6hffp"]
 [ext_resource type="AudioStream" uid="uid://cmusnj5npli1p" path="res://assets/sounds/DER BESTE SKIN EVER.mp3" id="4_63b55"]
@@ -112,6 +113,7 @@ shadow_size = 0
 shadow_offset = Vector2(-3.28, 5.735)
 
 [node name="random_selection_screen" type="Node2D"]
+script = ExtResource("1_eicbs")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 position = Vector2(-459, -9)
@@ -182,3 +184,12 @@ label_settings = SubResource("LabelSettings_yswrj")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
+
+[node name="Button" type="Button" parent="item_display"]
+offset_left = -78.0
+offset_top = 234.0
+offset_right = 84.0
+offset_bottom = 303.0
+text = "Daumen"
+
+[connection signal="pressed" from="item_display/Button" to="." method="_on_button_pressed"]
