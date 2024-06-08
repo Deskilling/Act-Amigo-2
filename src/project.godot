@@ -10,9 +10,10 @@ config_version=5
 
 [application]
 
-config/name="Act Amigo"
-run/main_scene="res://mainmenu.tscn"
+config/name="Act Amigo 2"
+run/main_scene="res://preload.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
+boot_splash/show_image=false
 config/icon="res://icon.svg"
 
 [display]
