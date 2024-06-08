@@ -49,3 +49,5 @@ func _process(delta):
 			queue_free()
 		if velocity <= 50:
 			is_rolling = false
+			if abs(position.y) < HEIGHT/2:
+				$"..".select(label_string)

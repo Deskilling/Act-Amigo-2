@@ -35,4 +35,12 @@ func random_impulse():
 	for i in range(0, randi() % 66):
 		label_string = file.get_line()
 	return label_string
+	
+func select(label_string : String):
+	$"../item_display/AnimationPlayer".play("fade_in")
+	hide()
+	$"../Sprite2D".hide()
+	$"../item_display/Label2".text = label_string
+	$"../item_display".show()
+	$AudioStreamPlayer3.play()
 
