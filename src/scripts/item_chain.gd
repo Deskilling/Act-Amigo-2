@@ -31,7 +31,7 @@ func generate_chain():
 		
 func random_impulse():
 	var file = FileAccess.open(impulse_database, FileAccess.READ)
-	var label_string = "schere"
+	var label_string = "das hat nicht geklappt schade schokolade marmelade :(("
 	for i in range(0, randi() % 66):
 		label_string = file.get_line()
 	return label_string
