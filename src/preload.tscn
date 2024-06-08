@@ -113,6 +113,7 @@ offset_bottom = 144.0
 disabled = true
 
 [node name="file" type="RichTextLabel" parent="Status"]
+layout_mode = 0
 offset_left = 16.0
 offset_top = 16.0
 offset_right = 328.0
@@ -121,6 +122,7 @@ bbcode_enabled = true
 text = "[center]File"
 
 [node name="index" type="RichTextLabel" parent="Status"]
+layout_mode = 0
 offset_left = 16.0
 offset_top = 48.0
 offset_right = 328.0
@@ -129,6 +131,7 @@ bbcode_enabled = true
 text = "[center]Index"
 
 [node name="saved" type="RichTextLabel" parent="Status"]
+layout_mode = 0
 offset_left = 16.0
 offset_top = 80.0
 offset_right = 328.0
@@ -137,6 +140,7 @@ bbcode_enabled = true
 text = "[center]Saved File"
 
 [node name="response_code" type="RichTextLabel" parent="Status"]
+layout_mode = 0
 offset_left = 16.0
 offset_top = 112.0
 offset_right = 328.0
