@@ -1,0 +1,145 @@
+[gd_scene load_steps=7 format=3 uid="uid://drujskadoaxdv"]
+
+[ext_resource type="Script" path="res://scripts/preload.gd" id="1_tcqwk"]
+[ext_resource type="Texture2D" uid="uid://cjkyd8i1vmhp8" path="res://assets/images/bernd.png" id="2_wmohq"]
+[ext_resource type="Texture2D" uid="uid://dbf38kqyrvufj" path="res://assets/images/logo.png" id="3_bop8u"]
+
+[sub_resource type="Gradient" id="Gradient_yu7v3"]
+offsets = PackedFloat32Array(0, 0.771084)
+colors = PackedColorArray(0.194349, 0.194349, 0.194349, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ovl3l"]
+gradient = SubResource("Gradient_yu7v3")
+fill_from = Vector2(0.469565, 0)
+fill_to = Vector2(0.491304, 1)
+
+[sub_resource type="Theme" id="Theme_vypel"]
+
+[node name="Preload" type="Node2D"]
+script = ExtResource("1_tcqwk")
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(180, 401)
+scale = Vector2(5.71875, 12.6875)
+texture = SubResource("GradientTexture2D_ovl3l")
+
+[node name="logo" type="Sprite2D" parent="background"]
+position = Vector2(-17.4863, -24.67)
+scale = Vector2(0.00606216, 0.00275169)
+texture = ExtResource("3_bop8u")
+
+[node name="bernd1" type="Sprite2D" parent="background"]
+position = Vector2(-0.699453, 21.399)
+scale = Vector2(0.196016, 0.0911133)
+texture = ExtResource("2_wmohq")
+
+[node name="bernd2" type="Sprite2D" parent="background"]
+position = Vector2(-6.20762, 28.2956)
+scale = Vector2(0.0854573, 0.0315269)
+texture = ExtResource("2_wmohq")
+
+[node name="bernd3" type="Sprite2D" parent="background"]
+position = Vector2(-19.4972, 24.5911)
+scale = Vector2(0.0425876, 0.0611625)
+texture = ExtResource("2_wmohq")
+
+[node name="bernd4" type="Sprite2D" parent="background"]
+position = Vector2(18.8852, 18.8374)
+scale = Vector2(0.0523511, 0.108453)
+texture = ExtResource("2_wmohq")
+
+[node name="title" type="RichTextLabel" parent="."]
+offset_left = 157.0
+offset_top = 27.0
+offset_right = 358.0
+offset_bottom = 181.0
+theme = SubResource("Theme_vypel")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 58
+
+[node name="act" type="RichTextLabel" parent="title"]
+layout_mode = 0
+offset_left = 75.0
+offset_top = -11.0
+offset_right = 204.0
+offset_bottom = 65.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/normal_font_size = 50
+text = " Act"
+tab_size = 6
+
+[node name="amigo" type="RichTextLabel" parent="title"]
+layout_mode = 0
+offset_left = -5.0
+offset_top = 45.0
+offset_right = 159.0
+offset_bottom = 137.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/normal_font_size = 40
+text = " Amigo"
+
+[node name="info" type="RichTextLabel" parent="title"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 93.0
+offset_right = 213.0
+offset_bottom = 151.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Your personal 
+theatre companion"
+
+[node name="network" type="Node" parent="."]
+
+[node name="HTTPRequest" type="HTTPRequest" parent="network"]
+
+[node name="Status" type="RichTextLabel" parent="."]
+offset_left = 8.0
+offset_top = 304.0
+offset_right = 352.0
+offset_bottom = 488.0
+bbcode_enabled = true
+
+[node name="bg" type="Button" parent="Status"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 336.0
+offset_bottom = 144.0
+disabled = true
+
+[node name="file" type="RichTextLabel" parent="Status"]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 328.0
+offset_bottom = 48.0
+bbcode_enabled = true
+text = "[center]File"
+
+[node name="index" type="RichTextLabel" parent="Status"]
+offset_left = 16.0
+offset_top = 48.0
+offset_right = 328.0
+offset_bottom = 80.0
+bbcode_enabled = true
+text = "[center]Index"
+
+[node name="saved" type="RichTextLabel" parent="Status"]
+offset_left = 16.0
+offset_top = 80.0
+offset_right = 328.0
+offset_bottom = 112.0
+bbcode_enabled = true
+text = "[center]Saved File"
+
+[node name="response_code" type="RichTextLabel" parent="Status"]
+offset_left = 16.0
+offset_top = 112.0
+offset_right = 328.0
+offset_bottom = 144.0
+bbcode_enabled = true
+text = "[center]Respone Code"
