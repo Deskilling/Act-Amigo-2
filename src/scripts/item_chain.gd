@@ -7,7 +7,7 @@ var spin_duration = 5.0
 
 const CHAIN_SIZE = 100
 
-@onready var impulse_database = "user://assets/text/impulse.txt"
+@onready var impulse_database = "res://assets/text/impulse.txt"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
