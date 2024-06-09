@@ -1,6 +1,6 @@
 extends Node2D
 
-var itemcontainer = preload("res://scenes/item_container.tscn")
+var itemcontainer = preload("res://scenes/impulse/item_container.tscn")
 var item_chain = []
 
 var spin_duration = 5.0
@@ -43,4 +43,3 @@ func select(label_string : String):
 	$"../item_display/Label2".text = label_string
 	$"../item_display".show()
 	$AudioStreamPlayer3.play()
-

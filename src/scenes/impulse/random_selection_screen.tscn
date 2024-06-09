@@ -1,13 +1,14 @@
-[gd_scene load_steps=15 format=3 uid="uid://ba7xvwb1uxrd0"]
+[gd_scene load_steps=16 format=3 uid="uid://ba7xvwb1uxrd0"]
 
-[ext_resource type="Script" path="res://scripts/item_chain.gd" id="1_0wcep"]
-[ext_resource type="Script" path="res://scripts/random_selection_screen.gd" id="1_eicbs"]
-[ext_resource type="Texture2D" uid="uid://c05q1qylpncrs" path="res://assets/images/leon-machere.jpg" id="2_bijjp"]
-[ext_resource type="AudioStream" uid="uid://bpvvuwb1bmkoa" path="res://assets/sounds/CaseClicking.mp3" id="3_6hffp"]
-[ext_resource type="AudioStream" uid="uid://cmusnj5npli1p" path="res://assets/sounds/DER BESTE SKIN EVER.mp3" id="4_63b55"]
-[ext_resource type="AudioStream" uid="uid://3smyiy34jo4g" path="res://assets/sounds/CaseOpened.mp3" id="6_s54ku"]
-[ext_resource type="Texture2D" uid="uid://cdbw1dc5e6eh4" path="res://assets/images/radial_gradient.png" id="7_mbpwl"]
-[ext_resource type="FontFile" uid="uid://435itcf47ohf" path="res://assets/fonts/cs_regular.ttf" id="8_xbed8"]
+[ext_resource type="Script" path="res://scripts/random_selection_screen.gd" id="1_fckuo"]
+[ext_resource type="Texture2D" uid="uid://bgurf7cqmtuoa" path="res://assets/images/taube.jpg" id="2_c28kc"]
+[ext_resource type="Script" path="res://scripts/item_chain.gd" id="3_wpi73"]
+[ext_resource type="AudioStream" uid="uid://bpvvuwb1bmkoa" path="res://assets/sounds/CaseClicking.mp3" id="4_1ttio"]
+[ext_resource type="AudioStream" uid="uid://cmusnj5npli1p" path="res://assets/sounds/DER BESTE SKIN EVER.mp3" id="5_5rt4w"]
+[ext_resource type="AudioStream" uid="uid://3smyiy34jo4g" path="res://assets/sounds/CaseOpened.mp3" id="6_cp2fp"]
+[ext_resource type="Texture2D" uid="uid://cdbw1dc5e6eh4" path="res://assets/images/radial_gradient.png" id="7_fat7y"]
+[ext_resource type="FontFile" uid="uid://435itcf47ohf" path="res://assets/fonts/cs_regular.ttf" id="8_7j76g"]
+[ext_resource type="Texture2D" uid="uid://dgrdagdmihj5a" path="res://assets/images/napoleon.png" id="8_uxf0v"]
 
 [sub_resource type="Gradient" id="Gradient_s2cug"]
 offsets = PackedFloat32Array(0.5)
@@ -106,33 +107,33 @@ _data = {
 }
 
 [sub_resource type="LabelSettings" id="LabelSettings_yswrj"]
-font = ExtResource("8_xbed8")
+font = ExtResource("8_7j76g")
 font_size = 30
 outline_color = Color(1, 1, 1, 0.627451)
 shadow_size = 0
 shadow_offset = Vector2(-3.28, 5.735)
 
 [node name="random_selection_screen" type="Node2D"]
-script = ExtResource("1_eicbs")
+script = ExtResource("1_fckuo")
 
-[node name="Sprite2D2" type="Sprite2D" parent="."]
-position = Vector2(175, 394)
-scale = Vector2(0.271, 0.275333)
-texture = ExtResource("2_bijjp")
+[node name="Taube" type="Sprite2D" parent="."]
+position = Vector2(176, 400)
+scale = Vector2(1.06, 2.10784)
+texture = ExtResource("2_c28kc")
 
 [node name="chain" type="Node2D" parent="."]
 position = Vector2(180, 400)
-script = ExtResource("1_0wcep")
+script = ExtResource("3_wpi73")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="chain"]
-stream = ExtResource("3_6hffp")
+stream = ExtResource("4_1ttio")
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="chain"]
-stream = ExtResource("4_63b55")
+stream = ExtResource("5_5rt4w")
 volume_db = -20.0
 
 [node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="chain"]
-stream = ExtResource("6_s54ku")
+stream = ExtResource("6_cp2fp")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
@@ -147,11 +148,16 @@ offset = Vector2(0, 400)
 [node name="Sprite2D3" type="Sprite2D" parent="."]
 position = Vector2(182, 401)
 scale = Vector2(0.19375, 0.421875)
-texture = ExtResource("7_mbpwl")
+texture = ExtResource("7_fat7y")
 
 [node name="item_display" type="Node2D" parent="."]
 visible = false
 position = Vector2(180, 400)
+
+[node name="Napoleon" type="Sprite2D" parent="item_display"]
+position = Vector2(-4, 16)
+scale = Vector2(0.5, 0.39503)
+texture = ExtResource("8_uxf0v")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="item_display"]
 libraries = {
@@ -170,7 +176,7 @@ offset_right = 4.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(2, 2)
-texture = ExtResource("7_mbpwl")
+texture = ExtResource("7_fat7y")
 expand_mode = 1
 
 [node name="Label2" type="Label" parent="item_display"]
@@ -192,10 +198,10 @@ vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="Button" type="Button" parent="item_display"]
-offset_left = -78.0
-offset_top = 234.0
-offset_right = 84.0
-offset_bottom = 303.0
+offset_left = -76.0
+offset_top = 80.0
+offset_right = 86.0
+offset_bottom = 149.0
 text = "Daumen"
 
 [connection signal="pressed" from="item_display/Button" to="." method="_on_button_pressed"]

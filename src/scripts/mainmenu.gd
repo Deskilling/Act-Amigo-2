@@ -9,13 +9,13 @@ func _scene(scene: String):
 	get_tree().change_scene_to_file("res://scenes/" + scene + ".tscn")
 
 func _on_to_impulse_pressed():
-	_scene("impulse")
+	_scene("impulse/random_selection_screen")
 
 func _on_to_rollen_orte_konflikte_pressed():
-	_scene("random_selection_screen")
+	pass
 
 func _on_to_stimmungen_pressed():
 	pass
 
 func _on_to_emojis_pressed():
-	pass	
+	pass
