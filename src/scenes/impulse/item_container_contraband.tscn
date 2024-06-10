@@ -1,0 +1,89 @@
+[gd_scene load_steps=12 format=3 uid="uid://2nlksbroqn2l"]
+
+[ext_resource type="Script" path="res://scripts/item_container.gd" id="1_nqumx"]
+[ext_resource type="Texture2D" uid="uid://cdbw1dc5e6eh4" path="res://assets/images/radial_gradient.png" id="2_rxmgl"]
+[ext_resource type="FontFile" uid="uid://435itcf47ohf" path="res://assets/fonts/cs_regular.ttf" id="3_i0ruh"]
+[ext_resource type="Texture2D" uid="uid://dvo5bjbcq267v" path="res://assets/images/gold.png" id="4_4rreu"]
+
+[sub_resource type="Gradient" id="Gradient_i2mir"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0.994792)
+colors = PackedColorArray(1, 1, 1, 0.901961)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ojpbs"]
+gradient = SubResource("Gradient_i2mir")
+width = 320
+height = 240
+fill_from = Vector2(0.5, 1)
+fill_to = Vector2(0.5, 0)
+metadata/_snap_enabled = true
+
+[sub_resource type="Gradient" id="Gradient_gtnre"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0, 0.182292, 0.776042, 1)
+colors = PackedColorArray(0, 0, 0, 0.654902, 1, 0.752941, 0.266667, 1, 1.03346, 0.728008, 0.257612, 0.975622, 0.835294, 0.00784314, 0, 0.054902)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_4p23w"]
+gradient = SubResource("Gradient_gtnre")
+width = 320
+height = 240
+fill_from = Vector2(0.5, 1)
+fill_to = Vector2(0.5, 0)
+metadata/_snap_enabled = true
+
+[sub_resource type="Gradient" id="Gradient_oq8g4"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(1, 0.752941, 0.266667, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_itynr"]
+gradient = SubResource("Gradient_oq8g4")
+width = 320
+height = 240
+fill_from = Vector2(0.5, 1)
+fill_to = Vector2(0.5, 0.9)
+metadata/_snap_enabled = true
+
+[sub_resource type="LabelSettings" id="LabelSettings_epq20"]
+font = ExtResource("3_i0ruh")
+font_size = 35
+outline_size = 4
+outline_color = Color(1, 1, 1, 0.627451)
+shadow_size = 0
+shadow_color = Color(0, 0, 0, 0.329412)
+shadow_offset = Vector2(-3.28, 5.735)
+
+[node name="item_container" type="Node2D"]
+script = ExtResource("1_nqumx")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("GradientTexture2D_ojpbs")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(0, 7.62939e-06)
+scale = Vector2(0.167, 0.125)
+texture = ExtResource("2_rxmgl")
+
+[node name="RED" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(0, 2.28882e-05)
+scale = Vector2(1, 1)
+texture = SubResource("GradientTexture2D_4p23w")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Sprite2D/RED"]
+position = Vector2(0, 109.859)
+scale = Vector2(1, 0.0845071)
+texture = SubResource("GradientTexture2D_itynr")
+
+[node name="Label" type="Label" parent="Sprite2D"]
+offset_left = -160.0
+offset_top = -62.0
+offset_right = 160.0
+offset_bottom = 58.0
+text = "Eumel"
+label_settings = SubResource("LabelSettings_epq20")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D"]
+scale = Vector2(1.59322, 1.59322)
+texture = ExtResource("4_4rreu")
