@@ -54,10 +54,15 @@ func generate_chain():
 		
 func random_impulse():
 	var file = FileAccess.open(impulse_database, FileAccess.READ)
-	var label_string = "das hat nicht geklappt schade schokolade marmelade :(("
-	for i in range(0, randi() % 66):
-		label_string = file.get_line()
+	var label_string = "Das hat nicht geklappt, schade Schokolade Marmelade :(("
+	var text = file.get_as_text()
+	var lines = text.split("\n")
+	var random_index = randi() % lines.size()
+
+	label_string = lines[random_index]
+
 	return label_string
+
 	
 func select(label_string : String):
 	$"../item_display/AnimationPlayer".play("fade_in")
