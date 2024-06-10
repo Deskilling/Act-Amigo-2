@@ -197,6 +197,13 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
+[node name="Respin" type="Button" parent="item_display"]
+offset_left = -76.0
+offset_top = 164.0
+offset_right = 86.0
+offset_bottom = 233.0
+text = "Respin"
+
 [node name="Button" type="Button" parent="item_display"]
 offset_left = -76.0
 offset_top = 80.0
@@ -204,4 +211,5 @@ offset_right = 86.0
 offset_bottom = 149.0
 text = "Daumen"
 
+[connection signal="pressed" from="item_display/Respin" to="." method="_on_respin_pressed"]
 [connection signal="pressed" from="item_display/Button" to="." method="_on_button_pressed"]

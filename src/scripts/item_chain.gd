@@ -18,7 +18,6 @@ const CHAIN_SIZE = 100
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	generate_chain()
-	
 
 
 func generate_chain():
@@ -58,12 +57,12 @@ func random_impulse():
 	var text = file.get_as_text()
 	var lines = text.split("\n")
 	var random_index = randi() % lines.size()
+	
+	lines.remove_at(len(lines)+2)
 
 	label_string = lines[random_index]
-
 	return label_string
 
-	
 func select(label_string : String):
 	$"../item_display/AnimationPlayer".play("fade_in")
 	hide()
